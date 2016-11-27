@@ -10,6 +10,7 @@ app.get("/rectangle/:l/:w", function(req,res) {
     "perimeter"	: (l + w) * 2,
     "area"	: l * w
   };
+  res.writeHead(200, {"Content-Type": "application/JSON"});
   res.end(JSON.stringify(rectangle));
 });
 
@@ -20,6 +21,7 @@ app.get("/circle/:r", function(req, res) {
     "perimeter"	: 2 * Math.PI * r,
     "area"	: Math.PI * r * r
   };
+  res.writeHead(200, {"Content-Type": "application/JSON"});
   res.end(JSON.stringify(circle));
 });
 
